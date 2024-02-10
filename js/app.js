@@ -73,25 +73,24 @@ if(sexo == "Masculino" || sexo == "masculino"){
 //el TMB representa la tasa metabolica basal, las calorias totales representan el total que se requiere consumir para mantenerse en el mismo peso, generalmente generalmente se agregan 350 calorias para aumentar de manera saludable, y se disminuyen 350 calorias para adelgazar de manera saludable (aproximadamente)
 // en este caso, como se requiere un ciclo for / while para la entrega, primero a las calorias totales le restare 350 y hare un ciclo for, asi puedo comenzar con las calorias requeridas para adelgazar y darle alguna utilidad al ciclo 
 
-caloriasTotales -=350;
-    
+caloriasTotales -=350;  
 if(fp != true){
-    alert(`su tasa metabolica basal es ${tmb}`)
+    alert(`su tasa metabolica basal es ${tmb.toFixed(2)}`)
 for(let i = 0; i<3; i++){
     switch(i){
         case 0:
-            auxiliar = "adelgazar"; 
+            auxiliar = "bajar de peso"; 
             break;
         case 1:
-            auxiliar = "mantener";
+            auxiliar = "mantenerse en peso";
             break;
         default:
-            auxiliar = "subir";
+            auxiliar = "aumentar de peso";
             break;
     }
-    alert(`las calorias requeridas para ${auxiliar} de peso son aproximadamente : ${caloriasTotales}`);
+    alert(`las calorias requeridas para ${auxiliar} son aproximadamente : ${caloriasTotales.toFixed(2)}`);
     caloriasTotales+=350;
-}
+};
 }else{
     alert("Intente Nuevamente");
-}
+};
